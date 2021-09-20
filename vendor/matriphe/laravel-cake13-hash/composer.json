@@ -1,0 +1,32 @@
+{
+    "name": "matriphe/laravel-cake13-hash",
+    "description": "Laravel 5 package to use legacy CakePHP 1.3 for password hash",
+    "keywords": ["laravel", "cake", "sha1", "password"],
+    "require": {
+        "illuminate/support": "5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0|^6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Zamroni",
+            "email": "halo@matriphe.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Matriphe\\Cake13Hash\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Matriphe\\Cake13Hash\\Test\\": "tests"
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}

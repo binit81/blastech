@@ -1,0 +1,20 @@
+{
+    "name": "Retailcore/Debit_Note",
+    "description": "send email",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rahul Radadiya",
+            "email": "rahul@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+    "psr-4":{
+        "Retailcore\\Debit_Note\\":"src/"
+        }
+    }
+    
+}

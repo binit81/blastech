@@ -1,0 +1,89 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "backpack/backupmanager": "^1.4",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "5.8.*",
+        "laravel/tinker": "^1.0",
+        "maatwebsite/excel": "^3.1",
+        "milon/barcode": "^5.3.6",
+        "spatie/laravel-backup": "^6.1",
+        "unisharp/laravel-ckeditor": "^4.7"
+    },
+    "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Retailcore\\Company_Profile\\": "package/Company_Profile/src/",
+            "Retailcore\\Customer_Source\\": "package/Customer_Source/src/",
+            "Retailcore\\Customer\\": "package/Customer/src/",
+            "Retailcore\\GST_Slabs\\": "package/GST_Slabs/src/",
+            "Retailcore\\Products\\" : "package/Products/src/",
+            "Retailcore\\Supplier\\" : "package/Supplier/src/",
+            "Retailcore\\PO\\" : "package/PO/src/",
+            "Retailcore\\Inward_Stock\\" : "package/Inward_Stock/src/",
+            "Retailcore\\Debit_Note\\" : "package/Debit_Note/src/",
+	        "Retailcore\\Sales\\"    : "package/Sales/src/",
+            "Retailcore\\SalesReturn\\"   : "package/SalesReturn/src/",
+            "Retailcore\\CreditNote\\"    : "package/CreditNote/src/",
+            "Retailcore\\CreditBalance\\" : "package/CreditBalance/src/",
+            "Retailcore\\SalesReport\\"   : "package/SalesReport/src/",
+	        "Retailcore\\PrintingFiles\\"   : "package/PrintingFiles/src/",
+	        "Retailcore\\BarcodePrinting\\" : "package/BarcodePrinting/src/",
+            "Retailcore\\DamageProducts\\" : "package/DamageProducts/src/",
+            "Retailcore\\EmployeeMaster\\" : "package/EmployeeMaster/src/",
+	        "Retailcore\\Products_Kit\\" : "package/Products_Kit/src/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}
